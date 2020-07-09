@@ -1,0 +1,18 @@
+###
+# curl -XPOST -d 'username=john&password=smith' http://localhost:8080/public/users/register
+POST http://localhost:8080/user/register
+Content-Type: application/x-www-form-urlencoded
+
+username=john&password=smith
+
+###
+# curl -H 'Authorization: Bearer b856850e-1ad4-456d-b5ca-1c2bfc355e5e' http://localhost:8081/users/current
+GET http://localhost:8080/users/current
+Authorization: Bearer ec7f8874-0fa1-48b9-8639-8ad04cfea9d5
+
+###
+
+
+
+
+
