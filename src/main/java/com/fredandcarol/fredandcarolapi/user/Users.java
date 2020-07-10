@@ -23,7 +23,7 @@ public class Users {
   }
 
   public Optional<User> find(String token) {
-    return null;
+    return Optional.ofNullable(users.get(token));
   }
 }
 

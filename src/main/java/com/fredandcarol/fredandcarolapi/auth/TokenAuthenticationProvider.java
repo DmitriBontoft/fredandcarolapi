@@ -11,7 +11,11 @@ import org.springframework.stereotype.Component;
 @Component
 public class TokenAuthenticationProvider extends AbstractUserDetailsAuthenticationProvider {
 
-  UserAuthenticationService auth;
+  final UserAuthenticationService auth;
+
+  public TokenAuthenticationProvider(UserAuthenticationService auth) {
+    this.auth = auth;
+  }
 
 
   @Override
