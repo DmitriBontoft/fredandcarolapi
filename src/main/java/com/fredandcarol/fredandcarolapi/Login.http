@@ -8,7 +8,7 @@ username=john&password=smith
 ###
 # curl -H 'Authorization: Bearer b856850e-1ad4-456d-b5ca-1c2bfc355e5e' http://localhost:8081/users/current
 GET http://localhost:8080/users/current
-Authorization: Bearer 8a113da3-fa7b-4aa1-a0a6-70e2987239ff
+Authorization: Bearer 09144a79-8d8b-4d79-bc88-eb7a8b3a8f37
 
 ###
 

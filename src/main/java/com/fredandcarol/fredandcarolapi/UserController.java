@@ -19,8 +19,8 @@ public class UserController {
   }
 
   @GetMapping("/current")
-  String getCurrent() {
-    return "Dmitri";
+  User getCurrent(@AuthenticationPrincipal final User user) {
+    return user;
   }
 
   @GetMapping("/logout")
