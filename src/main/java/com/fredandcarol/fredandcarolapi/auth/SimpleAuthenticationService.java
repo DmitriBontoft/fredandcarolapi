@@ -7,11 +7,11 @@ import java.util.UUID;
 import org.springframework.stereotype.Service;
 
 @Service
-public class UserAuthenticationService {
+public class SimpleAuthenticationService {
 
   private Users users;
 
-  public UserAuthenticationService(Users users) {
+  public SimpleAuthenticationService(Users users) {
     this.users = users;
   }
 
