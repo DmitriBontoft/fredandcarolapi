@@ -1,5 +1,6 @@
 package com.fredandcarol.fredandcarolapi.auth;
 
+import com.fredandcarol.fredandcarolapi.auth.jwt.UserAuthenticationService;
 import com.fredandcarol.fredandcarolapi.user.User;
 import com.fredandcarol.fredandcarolapi.user.Users;
 import java.util.Optional;
@@ -7,7 +8,7 @@ import java.util.UUID;
 import org.springframework.stereotype.Service;
 
 @Service
-public class SimpleAuthenticationService {
+public class SimpleAuthenticationService implements UserAuthenticationService {
 
   private Users users;
 

@@ -1,6 +1,9 @@
 package com.fredandcarol.fredandcarolapi.auth.jwt;
 
 import com.google.common.collect.ImmutableMap;
+import io.jsonwebtoken.Claims;
+import io.jsonwebtoken.Jwts;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -10,9 +13,14 @@ import org.springframework.security.core.userdetails.User;
 public class TokenAuthenticationService implements UserAuthenticationService {
   private Map<String, User> users = new HashMap<>();
   private JWTTokenService tokenService;
+  private String issuer = "tom";
+
+  public TokenAuthenticationService(JWTTokenService tokenService) {
+    this.tokenService = tokenService;
+  }
 
   private String newToken(final Map<String, String> attributes, final int expiresInSec) {
-    final DateTime now = dates.now();
+    Date now = new Date();
     final Claims claims = Jwts
         .claims()
         .setIssuer(issuer)
