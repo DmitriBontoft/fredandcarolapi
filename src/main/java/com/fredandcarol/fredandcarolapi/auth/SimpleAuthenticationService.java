@@ -22,10 +22,13 @@ public class SimpleAuthenticationService implements UserAuthenticationService {
     return Optional.of(uuid);
   }
 
+  @Override
   public void logout(User user) {
 
   }
 
+
+  @Override
   public Optional<User> findByToken(final String token) {
     return users.find(token);
   }
