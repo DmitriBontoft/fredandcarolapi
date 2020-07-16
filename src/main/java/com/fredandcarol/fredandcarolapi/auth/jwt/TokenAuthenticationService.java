@@ -1,5 +1,4 @@
 package com.fredandcarol.fredandcarolapi.auth.jwt;
-
 import com.fredandcarol.fredandcarolapi.user.User;
 import com.google.common.collect.ImmutableMap;
 import java.util.HashMap;
@@ -10,7 +9,7 @@ import org.springframework.stereotype.Service;
 @Service
 public class TokenAuthenticationService implements UserAuthenticationService {
 
-  private HashMap<String, User> users = new HashMap<>();
+  private HashMap<String,  User> users = new HashMap<>();
   private JWTTokenService tokenService;
 
   public TokenAuthenticationService(

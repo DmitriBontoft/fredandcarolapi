@@ -3,6 +3,7 @@ package com.fredandcarol.fredandcarolapi.auth.jwt;
 import static io.jsonwebtoken.SignatureAlgorithm.HS256;
 import static org.apache.commons.lang3.StringUtils.substringBeforeLast;
 
+import com.google.common.base.Supplier;
 import com.google.common.collect.ImmutableMap;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Clock;
@@ -13,7 +14,6 @@ import io.jsonwebtoken.impl.compression.GzipCompressionCodec;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.Map;
-import java.util.function.Supplier;
 import org.springframework.stereotype.Service;
 
 @Service

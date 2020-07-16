@@ -49,6 +49,7 @@
       <artifactId>commons-lang3</artifactId>
       <version>3.6</version>
     </dependency>
+<<<<<<< HEAD
 
     <dependency>
       <groupId>io.jsonwebtoken</groupId>
@@ -69,6 +70,8 @@
     </dependency>
 
     <!-- https://mvnrepository.com/artifact/com.google.guava/guava -->
+=======
+>>>>>>> master
     <dependency>
       <groupId>com.google.guava</groupId>
       <artifactId>guava</artifactId>
