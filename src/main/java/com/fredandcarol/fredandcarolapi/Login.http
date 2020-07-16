@@ -6,9 +6,21 @@ Content-Type: application/x-www-form-urlencoded
 username=john&password=smith
 
 ###
+
+# curl -XPOST -d 'username=john&password=smith' http://localhost:8081/public/users/login
+POST http://localhost:8081/public/users/login
+Content-Type: application/x-www-form-urlencoded
+
+username=john&password=smith
+
+###
+
+
+
+###
 # curl -H 'Authorization: Bearer b856850e-1ad4-456d-b5ca-1c2bfc355e5e' http://localhost:8081/users/current
 GET http://localhost:8080/users/current
-Authorization: Bearer 09144a79-8d8b-4d79-bc88-eb7a8b3a8f37
+Authorization: Bearer 8d99d79f-56f5-4d99-add0-41861ddc1c4b
 
 ###
 
