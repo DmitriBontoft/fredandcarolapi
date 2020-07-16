@@ -31,4 +31,9 @@ public class SimpleAuthenticationService implements UserAuthenticationService {
   public Optional<User> findByToken(final String token) {
     return users.find(token);
   }
+
+  @Override
+  public void register(User user) {
+    users.save(user);
+  }
 }

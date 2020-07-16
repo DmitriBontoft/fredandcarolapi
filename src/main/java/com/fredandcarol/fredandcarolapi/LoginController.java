@@ -1,6 +1,8 @@
 package com.fredandcarol.fredandcarolapi;
 
 import com.fredandcarol.fredandcarolapi.auth.SimpleAuthenticationService;
+import com.fredandcarol.fredandcarolapi.auth.UserAuthenticationService;
+import com.fredandcarol.fredandcarolapi.auth.jwt.TokenAuthenticationService;
 import com.fredandcarol.fredandcarolapi.user.User;
 import com.fredandcarol.fredandcarolapi.user.Users;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -13,10 +15,10 @@ import org.springframework.web.bind.annotation.RestController;
 public class LoginController {
 
   private Users users;
-  private SimpleAuthenticationService authentication;
+  private UserAuthenticationService authentication;
 
   public LoginController(Users users,
-      SimpleAuthenticationService authentication) {
+      TokenAuthenticationService authentication) {
     this.users = users;
     this.authentication = authentication;
   }
@@ -25,9 +27,8 @@ public class LoginController {
   public String register(
       @RequestParam("username") final String username,
       @RequestParam("password") final String password) {
-    users.save(
-        new User(username, username, password)
-    );
+
+    this.authentication.register(new User(username, username, password));
 
     return login(username, password);
   }

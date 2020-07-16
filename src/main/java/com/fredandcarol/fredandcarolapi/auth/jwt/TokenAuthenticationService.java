@@ -2,6 +2,7 @@ package com.fredandcarol.fredandcarolapi.auth.jwt;
 
 import com.fredandcarol.fredandcarolapi.auth.UserAuthenticationService;
 import com.fredandcarol.fredandcarolapi.user.User;
+import com.fredandcarol.fredandcarolapi.user.Users;
 import com.google.common.collect.ImmutableMap;
 import java.util.HashMap;
 import java.util.Objects;
@@ -11,7 +12,7 @@ import org.springframework.stereotype.Service;
 @Service
 public class TokenAuthenticationService implements UserAuthenticationService {
 
-  private HashMap<String,  User> users = new HashMap<>();
+  private Users users = new Users();
   private JWTTokenService tokenService;
 
   public TokenAuthenticationService(
@@ -27,7 +28,7 @@ public class TokenAuthenticationService implements UserAuthenticationService {
   }
 
   private Optional<User> findUserByUsername(String username) {
-    return Optional.ofNullable(users.get(username));
+    return users.findByUsername(username);
   }
 
   @Override
@@ -36,6 +37,11 @@ public class TokenAuthenticationService implements UserAuthenticationService {
         .of(tokenService.verify(token))
         .map(map -> map.get("username"))
         .flatMap(this::findUserByUsername);
+  }
+
+  @Override
+  public void register(User user) {
+    users.save(user);
   }
 
   @Override

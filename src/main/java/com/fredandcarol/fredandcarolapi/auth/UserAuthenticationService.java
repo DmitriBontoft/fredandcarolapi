@@ -10,4 +10,6 @@ public interface UserAuthenticationService {
   void logout(User user);
 
   Optional<User> findByToken(String token);
+
+  void register(User user);
 }
