@@ -1,8 +1,5 @@
 package com.fredandcarol.fredandcarolapi.auth.jwt;
 
-import static io.jsonwebtoken.SignatureAlgorithm.HS256;
-import static org.apache.commons.lang3.StringUtils.substringBeforeLast;
-
 import com.google.common.base.Supplier;
 import com.google.common.collect.ImmutableMap;
 import io.jsonwebtoken.Claims;
@@ -13,8 +10,14 @@ import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.impl.compression.GzipCompressionCodec;
 import java.util.Calendar;
 import java.util.Date;
-import java.util.Map;
+import org.springframework.security.core.token.Token;
+import org.springframework.security.core.token.TokenService;
 import org.springframework.stereotype.Service;
+import static io.jsonwebtoken.SignatureAlgorithm.HS256;
+import static io.jsonwebtoken.impl.TextCodec.BASE64;
+import static org.apache.commons.lang3.StringUtils.substringBeforeLast;
+
+import java.util.Map;
 
 @Service
 public class JWTTokenService implements Clock {
@@ -96,3 +99,4 @@ public class JWTTokenService implements Clock {
     return new Date();
   }
 }
+
