@@ -1,6 +1,5 @@
 package com.fredandcarol.fredandcarolapi.auth;
 
-import com.fredandcarol.fredandcarolapi.auth.jwt.UserAuthenticationService;
 import com.fredandcarol.fredandcarolapi.user.User;
 import com.fredandcarol.fredandcarolapi.user.Users;
 import java.util.Optional;

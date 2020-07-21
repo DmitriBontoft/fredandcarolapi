@@ -1,13 +1,8 @@
 package com.fredandcarol.fredandcarolapi;
 
 import com.fredandcarol.fredandcarolapi.auth.SimpleAuthenticationService;
-<<<<<<< HEAD
-import com.fredandcarol.fredandcarolapi.auth.jwt.TokenAuthenticationService;
-import com.fredandcarol.fredandcarolapi.auth.jwt.UserAuthenticationService;
-=======
 import com.fredandcarol.fredandcarolapi.auth.UserAuthenticationService;
 import com.fredandcarol.fredandcarolapi.auth.jwt.TokenAuthenticationService;
->>>>>>> master
 import com.fredandcarol.fredandcarolapi.user.User;
 import com.fredandcarol.fredandcarolapi.user.Users;
 import org.springframework.web.bind.annotation.PostMapping;

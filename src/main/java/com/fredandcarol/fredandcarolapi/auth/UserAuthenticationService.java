@@ -1,4 +1,4 @@
-package com.fredandcarol.fredandcarolapi.auth.jwt;
+package com.fredandcarol.fredandcarolapi.auth;
 
 import com.fredandcarol.fredandcarolapi.user.User;
 import java.util.Optional;

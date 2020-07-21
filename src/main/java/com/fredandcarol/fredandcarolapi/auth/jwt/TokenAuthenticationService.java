@@ -1,8 +1,8 @@
 package com.fredandcarol.fredandcarolapi.auth.jwt;
+import com.fredandcarol.fredandcarolapi.auth.UserAuthenticationService;
 import com.fredandcarol.fredandcarolapi.user.User;
 import com.fredandcarol.fredandcarolapi.user.Users;
 import com.google.common.collect.ImmutableMap;
-import java.util.HashMap;
 import java.util.Objects;
 import java.util.Optional;
 import org.springframework.stereotype.Service;
