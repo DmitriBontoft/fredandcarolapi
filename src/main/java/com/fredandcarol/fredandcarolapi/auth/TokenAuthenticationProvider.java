@@ -1,5 +1,6 @@
 package com.fredandcarol.fredandcarolapi.auth;
 
+import com.fredandcarol.fredandcarolapi.auth.jwt.TokenAuthenticationService;
 import java.util.Optional;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.authentication.dao.AbstractUserDetailsAuthenticationProvider;
@@ -11,9 +12,9 @@ import org.springframework.stereotype.Component;
 @Component
 public class TokenAuthenticationProvider extends AbstractUserDetailsAuthenticationProvider {
 
-  final SimpleAuthenticationService auth;
+  final TokenAuthenticationService auth;
 
-  public TokenAuthenticationProvider(SimpleAuthenticationService auth) {
+  public TokenAuthenticationProvider(TokenAuthenticationService auth) {
     this.auth = auth;
   }
 
