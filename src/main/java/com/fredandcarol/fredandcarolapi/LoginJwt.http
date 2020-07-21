@@ -17,7 +17,10 @@ username=john&password=smith
 
 # curl -H 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInppcCI6IkdaSVAifQ...' http://localhost:8081/users/current
 GET http://localhost:8080/users/current
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInppcCI6IkdaSVAifQ.H4sIAAAAAAAAAKtWyiwuVrJSSsnNLCnKVNJRykwsUbIyNLU0sbAwM7Qw1lFKrSiAC5iDBEqLU4vyEnNTgbqy8jPylGoBsRmQo0QAAAA.nuyvuklD5N_U-769-hiP6hv84r-Z3lngYUb0AxDuwaI
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInppcCI6IkdaSVAifQ.H4sIAAAAAAAAAKtWyiwuVrJSSsnNLCnKVNJRykwsUbIyNLU0NTY0MzM21lFKrSiACZgbgQRKi1OL8hJzU4G6svIz8pRqAafezvtEAAAA.3o-hy15b5qiKQ3BWulhbZ4sM3H8J5-te6DuyQPfFk7M
+
+
+
 
 
 
