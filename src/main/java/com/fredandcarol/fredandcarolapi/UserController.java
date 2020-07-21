@@ -1,6 +1,4 @@
 package com.fredandcarol.fredandcarolapi;
-
-import com.fredandcarol.fredandcarolapi.auth.SimpleAuthenticationService;
 import com.fredandcarol.fredandcarolapi.auth.jwt.TokenAuthenticationService;
 import com.fredandcarol.fredandcarolapi.auth.jwt.UserAuthenticationService;
 import com.fredandcarol.fredandcarolapi.user.User;

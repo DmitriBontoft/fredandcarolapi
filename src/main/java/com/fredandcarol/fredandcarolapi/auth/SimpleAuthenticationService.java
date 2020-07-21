@@ -35,8 +35,6 @@ public class SimpleAuthenticationService implements UserAuthenticationService {
 
   @Override
   public void register(User user) {
-    users.save(
-        new User(user.getUsername(), user.getUsername(), user.getPassword())
-    );
+    users.save(user);
   }
 }

@@ -1,0 +1,43 @@
+###
+# curl -XPOST -d 'username=john&password=smith' http://localhost:8080/public/users/register
+POST http://localhost:8080/user/register
+Content-Type: application/x-www-form-urlencoded
+
+username=john&password=smith
+
+###
+
+# curl -XPOST -d 'username=john&password=smith' http://localhost:8081/public/users/login
+POST http://localhost:8080/user/login
+Content-Type: application/x-www-form-urlencoded
+
+username=john&password=smith
+
+###
+
+# curl -H 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInppcCI6IkdaSVAifQ...' http://localhost:8081/users/current
+GET http://localhost:8080/users/current
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInppcCI6IkdaSVAifQ.H4sIAAAAAAAAAKtWyiwuVrJSSsnNLCnKVNJRykwsUbIyNLU0sbAwM7Qw1lFKrSiAC5iDBEqLU4vyEnNTgbqy8jPylGoBsRmQo0QAAAA.nuyvuklD5N_U-769-hiP6hv84r-Z3lngYUb0AxDuwaI
+
+
+
+###
+
+# curl -H 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInppcCI6IkdaSVAifQ...' http://localhost:8081/users/logout
+GET http://localhost:8080/users/logout
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInppcCI6IkdaSVAifQ...
+
+###
+
+# curl -H 'Authorization: Bearer ...' http://localhost:8081/users/current
+GET http://localhost:8081/users/current
+Authorization: Bearer ...
+
+###
+
+
+
+
+
+
+

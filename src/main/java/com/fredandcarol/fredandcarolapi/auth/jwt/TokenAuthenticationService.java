@@ -26,7 +26,7 @@ public class TokenAuthenticationService implements UserAuthenticationService {
   }
 
   private Optional<User> findUserByUsername(String username) {
-    return Optional.ofNullable(users.get(username));
+    return users.findByUsername(username);
   }
 
   @Override
@@ -39,9 +39,7 @@ public class TokenAuthenticationService implements UserAuthenticationService {
 
   @Override
   public void register(User user) {
-    users.save(
-        new User(user.getUsername(), user.getUsername(), user.getPassword())
-    );
+    users.save(user);
   }
 
   @Override
