@@ -27,6 +27,12 @@
       <version>0.9.1</version>
     </dependency>
     <dependency>
+      <groupId>com.google.common.html.types</groupId>
+      <artifactId>types</artifactId>
+      <version>1.0.8</version>
+    </dependency>
+
+    <dependency>
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter-web</artifactId>
     </dependency>
